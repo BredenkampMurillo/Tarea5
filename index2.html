@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos Prácticos de JavaScript</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #0056b3;
+      }
+      .example {
+        margin: 20px auto;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        max-width: 600px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .result {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #0056b3;
+        text-align: center;
+      }
+      button {
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0056b3;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #004494;
+      }
+      input {
+        margin-right: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: calc(50% - 10px);
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ejemplos Prácticos de JavaScript</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index2.html">Ejemplos Avanzados</a></li>
+    </ul>
+  </nav>
+    <div class="example">
+      <h2>Control de Flujo</h2>
+      <h3>if...else</h3>
+      <button onclick="comprobarNumero(5)">Comprobar 5</button>
+      <div class="result" id="result-if-else"></div>
+
+      <h3>switch</h3>
+      <button onclick="diaDeLaSemana(2)">Día 2</button>
+      <div class="result" id="result-switch"></div>
+
+      <h3>try/catch/throw</h3>
+      <button onclick="dividir(10, 0)">Dividir 10 entre 0</button>
+      <div class="result" id="result-try-catch"></div>
+    </div>
+
+    <div class="example">
+      <h2>Bucles</h2>
+      <h3>for</h3>
+      <button onclick="bucleFor()">Ejecutar Bucle For</button>
+      <div class="result" id="result-for"></div>
+
+      <h3>while</h3>
+      <button onclick="bucleWhile()">Ejecutar Bucle While</button>
+      <div class="result" id="result-while"></div>
+    </div>
+
+    <div class="example">
+      <h2>Funciones</h2>
+      <h3>Saludo</h3>
+      <button onclick="saludar('Oscar')">Saludar a Oscar</button>
+      <div class="result" id="result-funcion"></div>
+    </div>
+
+    <h1>Validación de Información en JavaScript</h1>
+
+    <div class="example">
+      <h2>Validar Día de la Semana</h2>
+      <label for="diaInput">Ingrese un número (0-6):</label>
+      <input type="number" id="diaInput" min="0" max="6" />
+      <button onclick="validarDia()">Validar Día</button>
+      <div class="result" id="result-dia"></div>
+    </div>
+
+    <div class="example">
+      <h2>Dividir Números</h2>
+      <label for="num1">Número 1:</label>
+      <input type="number" id="num1" />
+      <label for="num2">Número 2:</label>
+      <input type="number" id="num2" />
+      <button onclick="dividirNumeros()">Dividir</button>
+      <div class="result" id="result-division"></div>
+    </div>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>

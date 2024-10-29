@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos Teóricos de JavaScript</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background: #0056b3;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      main {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #333;
+        margin-top: 20px;
+      }
+      pre {
+        background: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        overflow: auto;
+        white-space: pre-wrap;
+      }
+      .example {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: #fafafa;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 0.9em;
+        color: #777;
+      }
+      nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ejemplos Prácticos de JavaScript</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index2.html">Ejemplos Avanzados</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="example">
+        <h2>Control de Flujo</h2>
+        <h3>if...else</h3>
+        <pre>
+function comprobarNumero(num) {
+    if (num > 0) {
+        return 'Positivo';
+    } else if (num < 0) {
+        return 'Negativo';
+    } else {
+        return 'Cero';
+    }
+}
+console.log(comprobarNumero(5)); // Positivo
+        </pre>
+
+        <h3>switch</h3>
+        <pre>
+function diaDeLaSemana(dia) {
+    switch (dia) {
+        case 0: return 'Domingo';
+        case 1: return 'Lunes';
+        case 2: return 'Martes';
+        case 3: return 'Miércoles';
+        case 4: return 'Jueves';
+        case 5: return 'Viernes';
+        case 6: return 'Sábado';
+        default: return 'Día inválido';
+    }
+}
+console.log(diaDeLaSemana(2)); // Martes
+        </pre>
+
+        <h3>try/catch/throw</h3>
+        <pre>
+function dividir(a, b) {
+    try {
+        if (b === 0) throw new Error('División por cero');
+        return a / b;
+    } catch (error) {
+        return error.message;
+    }
+}
+console.log(dividir(10, 0)); // División por cero
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>Bucles e Iteración</h2>
+        <h3>for</h3>
+        <pre>
+for (let i = 0; i < 5; i++) {
+    console.log(i); // 0, 1, 2, 3, 4
+}
+        </pre>
+
+        <h3>while</h3>
+        <pre>
+let j = 0;
+while (j < 5) {
+    console.log(j);
+    j++;
+}
+        </pre>
+
+        <h3>do...while</h3>
+        <pre>
+let k = 0;
+do {
+    console.log(k);
+    k++;
+} while (k < 5);
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>Funciones</h2>
+        <h3>Definir y Llamar Funciones</h3>
+        <pre>
+function saludar(nombre) {
+    return 'Hola, ' + nombre;
+}
+console.log(saludar('Oscar')); // Hola, Oscar
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>Expresiones y Operadores</h2>
+        <h3>Asignación y Comparación</h3>
+        <pre>
+let a = 5;
+let b = 10;
+console.log(a == b); // false
+console.log(a != b); // true
+        </pre>
+
+        <h3>Operadores Aritméticos</h3>
+        <pre>
+let suma = a + b; // 15
+let resta = b - a; // 5
+        </pre>
+
+        <h3>Operadores Lógicos</h3>
+        <pre>
+console.log(true && false); // false
+console.log(true || false); // true
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>Números y Fechas</h2>
+        <h3>Objeto Number</h3>
+        <pre>
+console.log(Number.isInteger(10)); // true
+        </pre>
+
+        <h3>Objeto Math</h3>
+        <pre>
+console.log(Math.sqrt(16)); // 4
+console.log(Math.random()); // Número aleatorio
+        </pre>
+
+        <h3>Objeto Date</h3>
+        <pre>
+let fecha = new Date();
+console.log(fecha); // Fecha y hora actual
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>Formateo de Texto</h2>
+        <h3>Cadenas Literales</h3>
+        <pre>
+let nombre = 'Ana';
+console.log(`Hola, ${nombre}!`); // Hola, Ana!
+        </pre>
+
+        <h3>Objeto String</h3>
+        <pre>
+let cadena = 'Hola Mundo';
+console.log(cadena.toUpperCase()); // HOLA MUNDO
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>Colecciones Indexadas</h2>
+        <h3>Arreglos</h3>
+        <pre>
+let frutas = ['manzana', 'banana', 'naranja'];
+console.log(frutas[1]); // banana
+        </pre>
+
+        <h3>Arreglos Tipados</h3>
+        <pre>
+// En JavaScript no hay tipos de arreglos, pero podemos usar Typed Arrays
+let arregloTipado = new Uint8Array(5);
+console.log(arregloTipado); // Uint8Array(5) [0, 0, 0, 0, 0]
+        </pre>
+      </div>
+
+      <div class="example">
+        <h2>DOM</h2>
+        <h3>Encontrar Elementos HTML</h3>
+        <pre>
+let elementoPorId = document.getElementById('miElemento');
+let elementosPorEtiqueta = document.getElementsByTagName('p');
+let elementosPorClase = document.getElementsByClassName('miClase');
+let elementosPorSelector = document.querySelectorAll('.miClase');
+        </pre>
+      </div>
+    </main>
+
+    <footer>
+      <p>Ejemplos de JavaScript - 2023</p>
+    </footer>
+  </body>
+</html>
